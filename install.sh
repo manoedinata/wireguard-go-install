@@ -16,7 +16,7 @@ echo ""
 echo "* Updating packages index..."
 apt update
 
-if [[ ! $(type -p curl) ]]; then
+if [[ ! $(which go) ]]; then
     echo "* Installing Go..."
     apt install golang-go -y
 fi
