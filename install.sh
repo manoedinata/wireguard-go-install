@@ -31,10 +31,13 @@ tar xvf wireguard-go-0.0.20191012.tar.xz || abort "[-] Extract failed!"
 cd wireguard-go-0.0.20191012
 make && make install || abort "[-] Compile failed!"
 
-echo "* Activating WireGuard-Go..."
-systemctl enable wg-quick@wg0
-systemctl start wg-quick@wg0
-
 echo ""
 echo "Done!"
 echo ""
+echo "Activate WireGuard-Go by using:"
+echo "$ systemctl enable wg-quick@wg0"
+echo "$ systemctl start wg-quick@wg0"
+echo ""
+echo "NOTE: You need to add WireGuard configuration"
+echo "in '/etc/wireguard/wg0.conf'"
+
